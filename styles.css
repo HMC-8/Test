@@ -1,172 +1,182 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://i.imgur.com/fFLOlXU.jpeg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇻🇳 𝑯𝒐𝒂𝒏𝒈 𝑴𝒊𝒏𝒉 𝑪𝒉𝒊𝒆𝒏 🇻🇳</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.imgur.com/fFLOlXU.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-.container {
-    max-width: 600px;
-    margin: auto;
-    padding: 5px;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 5px;
+            text-align: center;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-.profile-img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 8px;
-    border: 3px solid transparent;
-    background-image: linear-gradient(45deg, silver, white, silver);
-    background-clip: border-box;
-    animation: border-animation 5s infinite alternate;
-    transition: transform 0.3s;
-}
+        .profile-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 8px;
+            border: 3px solid transparent;
+            background-image: linear-gradient(45deg, silver, white, silver);
+            background-clip: border-box;
+            animation: border-animation 5s infinite alternate;
+            transition: transform 0.3s;
+        }
 
-.profile-img:hover {
-    transform: scale(1.05);
-}
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
 
-@keyframes border-animation {
-    0% { border-color: white; }
-    100% { border-color: black; }
-}
+        @keyframes border-animation {
+            0% { border-color: white; }
+            100% { border-color: black; }
+        }
 
-h1, p {
-    margin: 6px 0;
-    color: white;
-    transition: opacity 0.2s;
-}
+        h1, p {
+            margin: 6px 0;
+            color: white;
+            transition: opacity 0.2s;
+        }
 
-nav {
-    margin-top: 8px;
-}
+        nav {
+            margin-top: 8px;
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
 
-nav ul li {
-    margin: 8px 0;
-}
+        nav ul li {
+            margin: 8px 0;
+        }
 
-nav ul li a {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 8px 15px;
-    border-radius: 30px;
-    border: 2px solid white;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-}
+        nav ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 8px 15px;
+            border-radius: 30px;
+            border: 2px solid white;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
 
-nav ul li a:hover {
-    background-color: rgba(240, 240, 240, 0.9);
-    transform: scale(1.05);
-}
+        nav ul li a:hover {
+            background-color: rgba(240, 240, 240, 0.9);
+            transform: scale(1.05);
+        }
 
-footer {
-    text-align: center;
-    margin-top: 10px; 
-    font-size: 12px;
-    color: #777;
-}
+        footer {
+            text-align: center;
+            margin-top: 10px; 
+            font-size: 12px;
+            color: #777;
+        }
 
-.music-controls {
-    margin-top: 8px;
-}
+        .music-controls {
+            margin-top: 8px;
+        }
 
-.music-controls button {
-    padding: 7px 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+        .music-controls button {
+            padding: 7px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-.music-controls button:hover {
-    background-color: rgba(240, 240, 240, 0.9);
-}
+        .music-controls button:hover {
+            background-color: rgba(240, 240, 240, 0.9);
+        }
 
-.name {
-    font-size: 30px;
-    font-weight: bold;
-    background: linear-gradient(to right, white, gray, black);
-    background-size: 200%;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: text-gradient 5s infinite alternate;
-}
+        .name {
+            font-size: 30px;
+            font-weight: bold;
+            background: linear-gradient(to right, white, gray, black);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: text-gradient 5s infinite alternate;
+        }
 
-@keyframes text-gradient {
-    0% {
-        background-position: 0%;
-    }
-    100% {
-        background-position: 100%;
-    }
-}
+        @keyframes text-gradient {
+            0% {
+                background-position: 0%;
+            }
+            100% {
+                background-position: 100%;
+            }
+        }
 
-.glow {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-    animation: glow-animation 0.5s infinite alternate;
-}
+        .glow {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+            animation: glow-animation 0.5s infinite alternate;
+        }
 
-@keyframes glow-animation {
-    from {
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
-    }
-    to {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.7);
-    }
-}
+        .information-section {
+            display: none; /* Ẩn phần thông tin mặc định */
+            margin-top: 20px; /* Giảm khoảng cách phía trên */
+            padding: 20px; /* Thêm khoảng cách xung quanh */
+            background-color: rgba(0, 0, 0, 0.7); /* Thêm nền mờ */
+            border-radius: 10px; /* Bo góc cho phần thông tin */
+            position: relative; /* Để điều chỉnh vị trí */
+            z-index: 10; /* Đảm bảo phần thông tin ở trên các phần khác */
+        }
 
-.information-section {
-    display: none; /* Ẩn phần thông tin mặc định */
-    margin-top: 50px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Thêm nền cho phần thông tin */
-    padding: 20px; /* Thêm padding */
-    border-radius: 10px; /* Bo góc */
-}
+        .information-section h2 {
+            margin: 20px 0;
+            color: white;
+        }
 
-.information-section h2 {
-    margin: 20px 0;
-    color: white;
-}
+        .information-section p {
+            color: white;
+            margin: 10px 0;
+        }
 
-.information-section p {
-    color: white;
-    margin: 10px 0;
-}
+        .information-section a {
+            display: inline-block;
+            color: white;
+            text-decoration: underline;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" preload="auto" loop>
+        <source src="https://raw.githubusercontent.com/HMC-8/HoangMinhChien/96b26069f2132c668d9573e9cae700c9b9509473/yt1s.com%20-%20%20Th%E1%BB%A7%20%C4%90%C3%B4%20%20Dynasty%20Remix%20%20Close%20x%20Run%20Free%20%20List%20Nh%E1%BA%A1c%20TikTok%20Remix%20Ch%C3%A1y%20Nh%C6%B0%20Fai%20Fai%20.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-.information-section a {
-    display: inline-block;
-    color: white;
-    text-decoration: underline;
-    margin: 5px 0;
-}
-
-.information-section button {
-    margin-top: 15px; /* Thêm khoảng cách cho nút đóng */
-    padding: 7px 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-    color: black;
-    font-weight: bold
+    <div class="container">
+        <header>
+            <img src="https://i.imgur.com/5JPtVjC.jpeg" alt="Profile Picture" class="profile-img glow-avatar" id="avatar">
+            <h1 class="name glow" id="name">𝑯𝒐𝒂𝒏𝒈 𝑴𝒊𝒏𝒉 𝑪𝒉𝒊𝒆𝒏</h1>
+            <p>Xin chào, Tôi là<br>🇻🇳 Hoàng Minh Chiến 🇻🇳</p>
+            <nav>
+                <ul>
+                    <li><a href="#information-section" id="info-button">Thông tin</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p>Nghe
