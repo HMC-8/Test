@@ -91,47 +91,11 @@
             color: #777;
         }
 
-        .music-controls {
-            margin-top: 8px;
-        }
-
-        .music-controls button {
-            padding: 7px 12px;
-            border: none;
-            border-radius: 5px;
-            background-color: white;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .music-controls button:hover {
-            background-color: rgba(240, 240, 240, 0.9);
-        }
-
-        .name {
-            font-size: 30px;
-            font-weight: bold;
-            background: linear-gradient(to right, white, gray, black);
-            background-size: 200%;
-            -webkit-background-clip: text;
-            color: transparent;
-            animation: text-gradient 5s infinite alternate;
-        }
-
-        @keyframes text-gradient {
-            0% {
-                background-position: 0%;
-            }
-            100% {
-                background-position: 100%;
-            }
-        }
-
-        .glow {
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-            animation: glow-animation 0.5s infinite alternate;
+        .video-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
         }
 
         .information-section {
@@ -163,10 +127,9 @@
     </style>
 </head>
 <body>
-    <audio id="background-music" preload="auto" loop>
-        <source src="https://raw.githubusercontent.com/HMC-8/HoangMinhChien/96b26069f2132c668d9573e9cae700c9b9509473/yt1s.com%20-%20%20Th%E1%BB%A7%20%C4%90%C3%B4%20%20Dynasty%20Remix%20%20Close%20x%20Run%20Free%20%20List%20Nh%E1%BA%A1c%20TikTok%20Remix%20Ch%C3%A1y%20Nh%C6%B0%20Fai%20Fai%20.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/JIb3dDBY0ws" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <div class="container">
         <header>
@@ -179,11 +142,7 @@
                 </ul>
             </nav>
         </header>
-        <p>Nghe nhạc thì bấm zô đayy</p>
-
-        <div class="music-controls">
-            <button id="toggle-music-button">Nhhạc Chill . . .</button>
-        </div>
+        <p>Xem video thì bấm zô đayy</p>
     </div>
 
     <!-- Phần thông tin -->
@@ -200,26 +159,12 @@
         <p><a href="https://zalo.me/0345161185">Zalo</a></p>
         <p><a href="https://youtube.com/@hoangminhchien_8?si=kzWuivBH8LTsyyyW">YouTube</a></p>
         <p><a href="https://www.tiktok.com/@hoangminhchien_8?_t=8qVWv0Eyuzg&_r=1">TikTok</a></p>
-            <footer>
+        <footer>
             <p>© 2024 Hoàng Minh Chiến. All rights reserved.</p>
-            </footer>
+        </footer>
     </div>
+
     <script>
-        const audio = document.getElementById('background-music');
-        const toggleButton = document.getElementById('toggle-music-button');
-        let isPlaying = false;
-
-        toggleButton.addEventListener('click', function() {
-            if (isPlaying) {
-                audio.pause();
-                toggleButton.textContent = 'Bật nhạc Chill . . .';
-            } else {
-                audio.play();
-                toggleButton.textContent = 'Tắt nhạc . . .';
-            }
-            isPlaying = !isPlaying;
-        });
-
         // Thêm sự kiện click cho nút thông tin
         const infoButton = document.getElementById('info-button');
         const informationSection = document.getElementById('information-section');
