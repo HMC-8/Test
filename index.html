@@ -13,7 +13,7 @@
             background-size: cover;
             background-position: center;
             height: 100vh;
-            overflow-x: hidden;
+            overflow: hidden;
         }
 
         .container {
@@ -129,16 +129,6 @@
             }
         }
 
-        .social-logo {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 5px;
-            vertical-align: middle;
-            object-fit: cover;
-            background-color: black;
-        }
-
         .glow {
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
             animation: glow-animation 0.5s infinite alternate;
@@ -153,26 +143,27 @@
             }
         }
 
-        .glow-avatar {
-            animation: glow-avatar-animation 0.5s infinite alternate;
-        }
-
-        @keyframes glow-avatar-animation {
-            from {
-                box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-            }
-            to {
-                box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-            }
-        }
-
-        /* Phần thông tin ở dưới */
-        #information-section {
-            background-color: white;
-            color: black;
-            padding: 20px;
-            margin-top: 100vh; /* Đảm bảo phần này nằm dưới cùng */
+        .information-section {
+            display: none; /* Ẩn phần thông tin mặc định */
+            margin-top: 50px;
             text-align: center;
+        }
+
+        .information-section h2 {
+            margin: 20px 0;
+            color: white;
+        }
+
+        .information-section p {
+            color: white;
+            margin: 10px 0;
+        }
+
+        .information-section a {
+            display: inline-block;
+            color: white;
+            text-decoration: underline;
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -189,7 +180,7 @@
             <p>Xin chào, Tôi là<br>🇻🇳 Hoàng Minh Chiến 🇻🇳</p>
             <nav>
                 <ul>
-                    <li><a href="#information-section">Thông tin</a></li>
+                    <li><a href="#information-section" id="info-button">Thông tin</a></li>
                 </ul>
             </nav>
         </header>
@@ -204,16 +195,19 @@
         </footer>
     </div>
 
-    <!-- Phần thông tin cá nhân -->
-    <div id="information-section">
-        <h2>Thông tin của tôi</h2>
-        <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=794478153&mibextid=ZbWKwL">Facebook</a></li>
-            <li><a href="https://t.me/HoangMinhChien_8">Telegram</a></li>
-            <li><a href="https://zalo.me/0345161185">Zalo</a></li>
-            <li><a href="https://youtube.com/@hoangminhchien_8?si=kzWuivBH8LTsyyyW">YouTube</a></li>
-            <li><a href="https://www.tiktok.com/@hoangminhchien_8?_t=8qVWv0Eyuzg&_r=1">TikTok</a></li>
-        </ul>
+    <!-- Phần thông tin -->
+    <div class="information-section" id="information-section">
+        <h2>Thông tin cá nhân</h2>
+        <p>Tên: Hoàng Minh Chiến</p>
+        <p>Ngày sinh: 01/01/2000</p>
+        <p>Địa chỉ: Việt Nam</p>
+        <p>Email: hoangminhchien@example.com</p>
+        <p>Liên kết mạng xã hội:</p>
+        <p><a href="https://www.facebook.com/profile.php?id=794478153&mibextid=ZbWKwL">Facebook</a></p>
+        <p><a href="https://t.me/HoangMinhChien_8">Telegram</a></p>
+        <p><a href="https://zalo.me/0345161185">Zalo</a></p>
+        <p><a href="https://youtube.com/@hoangminhchien_8?si=kzWuivBH8LTsyyyW">YouTube</a></p>
+        <p><a href="https://www.tiktok.com/@hoangminhchien_8?_t=8qVWv0Eyuzg&_r=1">TikTok</a></p>
     </div>
 
     <script>
@@ -230,6 +224,16 @@
                 toggleButton.textContent = 'Tắt nhạc . . .';
             }
             isPlaying = !isPlaying;
+        });
+
+        // Thêm sự kiện click cho nút thông tin
+        const infoButton = document.getElementById('info-button');
+        const informationSection = document.getElementById('information-section');
+
+        infoButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+            informationSection.style.display = 'block'; // Hiện phần thông tin
+            informationSection.scrollIntoView({ behavior: 'smooth' }); // Cuộn đến phần thông tin
         });
     </script>
 </body>
