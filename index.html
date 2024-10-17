@@ -4,164 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🇻🇳 𝑯𝒐𝒂𝒏𝒈 𝑴𝒊𝒏𝒉 𝑪𝒉𝒊𝒆𝒏 🇻🇳</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://i.imgur.com/fFLOlXU.jpeg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 5px;
-            text-align: center;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .profile-img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 8px;
-            border: 3px solid transparent;
-            background-image: linear-gradient(45deg, silver, white, silver);
-            background-clip: border-box;
-            animation: border-animation 5s infinite alternate;
-            transition: transform 0.3s;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        @keyframes border-animation {
-            0% { border-color: white; }
-            100% { border-color: black; }
-        }
-
-        h1, p {
-            margin: 6px 0;
-            color: white;
-            transition: opacity 0.2s;
-        }
-
-        nav {
-            margin-top: 8px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 8px 0;
-        }
-
-        nav ul li a {
-            display: inline-block;
-            text-decoration: none;
-            color: black;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 8px 15px;
-            border-radius: 30px;
-            border: 2px solid white;
-            font-weight: bold;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        nav ul li a:hover {
-            background-color: rgba(240, 240, 240, 0.9);
-            transform: scale(1.05);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 10px; 
-            font-size: 12px;
-            color: #777;
-        }
-
-        .music-controls {
-            margin-top: 8px;
-        }
-
-        .music-controls button {
-            padding: 7px 12px;
-            border: none;
-            border-radius: 5px;
-            background-color: white;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .music-controls button:hover {
-            background-color: rgba(240, 240, 240, 0.9);
-        }
-
-        .name {
-            font-size: 30px;
-            font-weight: bold;
-            background: linear-gradient(to right, white, gray, black);
-            background-size: 200%;
-            -webkit-background-clip: text;
-            color: transparent;
-            animation: text-gradient 5s infinite alternate;
-        }
-
-        @keyframes text-gradient {
-            0% {
-                background-position: 0%;
-            }
-            100% {
-                background-position: 100%;
-            }
-        }
-
-        .glow {
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-            animation: glow-animation 0.5s infinite alternate;
-        }
-
-        @keyframes glow-animation {
-            from {
-                text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
-            }
-            to {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.7);
-            }
-        }
-
-        .information-section {
-            display: none; /* Ẩn phần thông tin mặc định */
-            margin-top: 50px;
-            text-align: center;
-            opacity: 0; /* Thay đổi thuộc tính opacity */
-            transform: translateY(20px); /* Di chuyển xuống phía dưới */
-            transition: opacity 0.5s, transform 0.5s; /* Thêm hiệu ứng chuyển tiếp */
-        }
-
-        .information-section.show {
-            display: block;
-            opacity: 1; /* Hiện phần thông tin */
-            transform: translateY(0); /* Di chuyển về vị trí ban đầu */
-        }
-
-        .information-section p {
-            margin: 10px 0; /* Thêm khoảng cách cho các đoạn văn */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Liên kết tới tệp CSS -->
 </head>
 <body>
     <audio id="background-music" preload="auto" loop>
@@ -183,4 +26,30 @@
         <p>Nghe nhạc thì bấm zô đayy</p>
 
         <div class="music-controls">
-            <
+            <button id="toggle-music-button">Nhhạc Chill . . .</button>
+        </div>
+
+        <footer>
+            <p>© 2024 Hoàng Minh Chiến. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Phần thông tin -->
+    <div class="information-section" id="information-section">
+        <h2>Thông tin cá nhân</h2>
+        <p>Tên: Hoàng Minh Chiến</p>
+        <p>Ngày sinh: 23/6/2008</p>
+        <p>Địa chỉ: Việt Nam</p>
+        <p>Email: hmc2362008@gmail.com</p>
+        <p>Liên kết mạng xã hội:</p>
+        <p><a href="https://www.facebook.com/profile.php?id=794478153&mibextid=ZbWKwL">Facebook</a></p>
+        <p><a href="https://t.me/HoangMinhChien_8">Telegram</a></p>
+        <p><a href="https://zalo.me/0345161185">Zalo</a></p>
+        <p><a href="https://youtube.com/@hoangminhchien_8?si=kzWuivBH8LTsyyyW">YouTube</a></p>
+        <p><a href="https://www.tiktok.com/@hoangminhchien_8?_t=8qVWv0Eyuzg&_r=1">TikTok</a></p>
+        <button id="close-info-button">Đóng thông tin</button> <!-- Nút đóng -->
+    </div>
+
+    <script src="script.js"></script> <!-- Liên kết tới tệp JavaScript -->
+</body>
+</html>
