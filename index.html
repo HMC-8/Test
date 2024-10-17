@@ -9,40 +9,106 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://i.imgur.com/fFLOlXU.jpeg'); /* Ảnh nền */
+            background-image: url('https://i.imgur.com/fFLOlXU.jpeg');
             background-size: cover;
             background-position: center;
-            color: white;
+            height: 100vh;
+            overflow-x: hidden;
         }
 
         .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 5px;
             text-align: center;
-            padding: 20px;
         }
 
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             border: 3px solid transparent;
             background-image: linear-gradient(45deg, silver, white, silver);
-            animation: glow-avatar 0.5s infinite alternate;
+            background-clip: border-box;
+            animation: border-animation 5s infinite alternate;
+            transition: transform 0.3s;
         }
 
-        @keyframes glow-avatar {
-            0% {
-                box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-            }
-            100% {
-                box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-            }
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes border-animation {
+            0% { border-color: white; }
+            100% { border-color: black; }
+        }
+
+        h1, p {
+            margin: 6px 0;
+            color: white;
+        }
+
+        nav {
+            margin-top: 8px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 8px 0;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 8px 15px;
+            border-radius: 30px;
+            border: 2px solid white;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(240, 240, 240, 0.9);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .music-controls {
+            margin-top: 8px;
+        }
+
+        .music-controls button {
+            padding: 7px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .music-controls button:hover {
+            background-color: rgba(240, 240, 240, 0.9);
         }
 
         .name {
             font-size: 30px;
-            margin: 10px 0;
+            font-weight: bold;
             background: linear-gradient(to right, white, gray, black);
             background-size: 200%;
             -webkit-background-clip: text;
@@ -59,91 +125,77 @@
             }
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 10px 0;
-        }
-
-        nav ul li a {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            color: black;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px 15px;
-            border-radius: 25px;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        nav ul li img {
-            width: 25px;
-            height: 25px;
-            margin-right: 8px;
-        }
-
-        nav ul li a:hover {
-            background-color: rgba(240, 240, 240, 0.9);
-            transform: scale(1.03);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 12px;
-            color: #777;
-        }
-
         /* Phần thông tin */
         .info-section {
-            margin-top: 50px;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Nền đen mờ */
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            margin-top: 30px;
         }
 
         .info-section h2 {
-            color: white;
             font-size: 24px;
+            margin-bottom: 10px;
         }
 
         .info-section p {
-            color: white;
             font-size: 16px;
         }
-
     </style>
 </head>
 <body>
+    <audio id="background-music" preload="auto" loop>
+        <source src="https://raw.githubusercontent.com/HMC-8/HoangMinhChien/96b26069f2132c668d9573e9cae700c9b9509473/yt1s.com%20-%20%20Th%E1%BB%A7%20%C4%90%C3%B4%20%20Dynasty%20Remix%20%20Close%20x%20Run%20Free%20%20List%20Nh%E1%BA%A1c%20TikTok%20Remix%20Ch%C3%A1y%20Nh%C6%B0%20Fai%20Fai%20.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <div class="container">
         <header>
-            <img src="https://i.imgur.com/5JPtVjC.jpeg" alt="Profile Picture" class="profile-img">
-            <h1 class="name">𝑯𝒐𝒂𝒏𝒈 𝑴𝒊𝒏𝒉 𝑪𝒉𝒊𝒆𝒏</h1>
-            <p>Đây là thông tin của <br>🇻🇳 Hoàng Minh Chiến 🇻🇳</p>
+            <img src="https://i.imgur.com/5JPtVjC.jpeg" alt="Profile Picture" class="profile-img glow-avatar" id="avatar">
+            <h1 class="name glow" id="name">𝑯𝒐𝒂𝒏𝒈 𝑴𝒊𝒏𝒉 𝑪𝒉𝒊𝒆𝒏</h1>
+            <p>Xin chào, Tôi là<br>🇻🇳 Hoàng Minh Chiến 🇻🇳</p>
+            <nav>
+                <ul>
+                    <li><a href="#info-section">Thông tin</a></li> <!-- Cập nhật đường dẫn đến phần thông tin -->
+                </ul>
+            </nav>
         </header>
 
-        <nav>
-            <ul>
-                <li><a href="#info-section">Thông tin</a></li> <!-- Liên kết nội bộ -->
-                <li><a href="https://www.facebook.com/profile.php?id=794478153&mibextid=ZbWKwL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/667px-2023_Facebook_icon.svg.png" alt="Facebook">Facebook</a></li>
-                <li><a href="https://t.me/HoangMinhChien_8"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/2048px-Telegram_2019_Logo.svg.png" alt="Telegram">Telegram</a></li>
-                <li><a href="https://zalo.me/0345161185"><img src="https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png" alt="Zalo">Zalo</a></li>
-                <li><a href="https://youtube.com/@hoangminhchien_8?si=kzWuivBH8LTsyyyW"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube">YouTube</a></li>
-                <li><a href="https://www.tiktok.com/@hoangminhchien_8?_t=8qVWv0Eyuzg&_r=1"><img src="https://cdn.pixabay.com/photo/2021/06/15/12/28/tiktok-6338429_960_720.png" alt="TikTok">TikTok</a></li>
-            </ul>
-        </nav>
+        <p>Nghe nhạc thì bấm zô đayy</p>
+
+        <div class="music-controls">
+            <button id="toggle-music-button">Nhhạc Chill . . .</button>
+        </div>
+
+        <footer>
+            <p>© 2024 Hoàng Minh Chiến. All rights reserved.</p>
+        </footer>
     </div>
 
-    <!-- Phần thông tin nối thêm bên dưới -->
-    <section class="info-section" id="info-section">
-        <h2>Thông tin chi tiết</h2>
-        <p>Hoàng Minh Chiến là một lập trình viên với niềm đam mê công nghệ và sáng tạo nội dung. Luôn muốn học hỏi và phát triển, Chiến đã tham gia nhiều dự án công nghệ và tích cực hoạt động trên các nền tảng mạng xã hội như Facebook, Telegram, Zalo, YouTube, và TikTok để chia sẻ kiến thức và kinh nghiệm với cộng đồng.</p>
+    <!-- Phần thông tin nằm dưới cùng -->
+    <section id="info-section" class="info-section">
+        <h2>Thông tin cá nhân</h2>
+        <p>Đây là phần thông tin chi tiết của Hoàng Minh Chiến.</p>
+        <p>Sinh ngày: 01/01/2000</p>
+        <p>Email: hoangminhchien@gmail.com</p>
+        <p>Sở thích: Lập trình, nghe nhạc, chơi game.</p>
     </section>
 
-    <footer>
-        <p>© 2024 Hoàng Minh Chiến. All rights reserved.</p>
-    </footer>
+    <script>
+        const audio = document.getElementById('background-music');
+        const toggleButton = document.getElementById('toggle-music-button');
+        let isPlaying = false;
+
+        toggleButton.addEventListener('click', function() {
+            if (isPlaying) {
+                audio.pause();
+                toggleButton.textContent = 'Bật nhạc Chill . . .';
+            } else {
+                audio.play();
+                toggleButton.textContent = 'Tắt nhạc . . .';
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
 </body>
 </html>
