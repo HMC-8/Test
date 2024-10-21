@@ -1,0 +1,963 @@
+<!--
++------------------------------------------------------------
+|  __        __        _____                    
+| \ \      / /   _ __|_   _|__  __ _ _ __ ___  
+|  \ \ /\ / / | | / __|| |/ _ \/ _` | '_ ` _ \ 
+|   \ V  V /| |_| \__ \| |  __/ (_| | | | | | |
+|    \_/\_/  \__,_|___/|_|\___|\__,_|_| |_| |_|
+|                                            
++------------------------------------------------------------
+| Author: ThanhDieu
+| Telegram: https://t.me/wus_team
+| Generator Time: 21/05/2023
++------------------------------------------------------------
+| Note: This code is for educational purposes only.
++------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://thanhdieu.com/thanhdieuft-data/img/logo.jpg" type="image/x-icon">
+    <title>Hacked by WT</title>
+    <meta property="og:image"
+        content="https://pkmacbook.com/wp-content/uploads/2021/12/Bo-suu-tap-hinh-hacker-dep-nhat.jpg">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Lalezar|Bevan&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            font-family: Lalezar;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0);
+            background-image: url("https://i.imgur.com/oky5bJf.jpeg") !important;
+            background-position: left top;
+            background-size: auto;
+            background-repeat: repeat;
+            background-attachment: scroll;
+            overflow: hidden;
+        }
+
+        #clock {
+            position: relative;
+            transform: translate(-50%, -50%) scale(0);
+            width: 100%;
+            top: -100%;
+            height: 100%;
+            background: transparent;
+        }
+
+        @media (max-width: 787px) {
+            .label {
+                font-size: 4vw;
+            }
+
+            .msg {
+                display: none;
+            }
+        }
+
+        .text {
+            white-space: nowrap;
+            font-weight: 700;
+            font-size: 30px;
+            color: #00fd22;
+            text-shadow: 5px 5px 30px #ff0000;
+            text-align: center;
+            margin-top: 13em;
+        }
+
+        .container-text {
+            margin-top: -100px;
+        }
+
+        .logo {
+            height: 280px;
+            width: 280px;
+            margin-top: 5px;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 20px red;
+            object-fit: cover;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .rotate {
+            animation: rotate 0.007s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #hacked {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .label {
+            display: inline-block;
+            color: #4d4d4d;
+            text-align: center;
+            padding: 0 2%;
+            font-size: 2vw;
+            transition: left 1s, top 1s;
+            transform-origin: 0% 0%;
+        }
+
+        .msg {
+            z-index: 9999;
+            font-family: monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 16px;
+            padding-top: 1vh;
+            background: red;
+            box-shadow: 0 0 15px red;
+            text-shadow: 0 0 10px white;
+            color: white;
+            padding: 0.5vw;
+            position: absolute;
+            left: 53%;
+            margin-left: -10vw;
+            top: 90%;
+            margin-top: -2.5vh;
+            text-align: center;
+            min-width: 5vw;
+            animation-name: blink;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        .label {
+            display: inline-block;
+            color: #4d4d4d;
+            text-align: center;
+            padding: 0 5px;
+            font-size: 16px;
+            transition: left 1s, top 1s;
+            transform-origin: 0% 0%;
+        }
+
+        #console p {
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 4.1vh;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            color: limegreen;
+            text-shadow: 0px 0px 10px limegreen;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1,
+        h2 {
+            font-family: "Lalezar", cursive;
+            color: red;
+            text-align: center;
+        }
+
+        @media (max-width: 787px) {
+            h1 {
+                font-size: 25px;
+            }
+        }
+
+        a {
+            word-wrap: break-word;
+            color: white;
+            font-family: "Lalezar", cursive;
+            text-align: center;
+        }
+
+        p {
+            color: #6b69ff;
+            font-family: "Lalezar", cursive;
+            text-align: center;
+        }
+
+        .ag-format-container {
+            width: 1142px;
+            margin: 0 auto;
+        }
+
+
+        img {
+            max-width: 100%;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        .ag-smoke-block {
+            z-index: 0;
+            pointer-events: none;
+            position: relative;
+        }
+
+        .ag-smoke-1 {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            -webkit-animation: an-smoke-1 6s ease-in-out infinite;
+            -moz-animation: an-smoke-1 6s ease-in-out infinite;
+            -o-animation: an-smoke-1 6s ease-in-out infinite;
+            animation: an-smoke-1 6s ease-in-out infinite;
+        }
+
+        .ag-smoke-2 {
+            width: 57.1em;
+            z-index: -2;
+            top: 7em;
+        }
+
+        .ag-smoke-2,
+        .ag-smoke-3 {
+            position: absolute;
+            left: 0;
+            -webkit-animation: an-smoke-2 6s ease-in-out infinite;
+            -moz-animation: an-smoke-2 6s ease-in-out infinite;
+            -o-animation: an-smoke-2 6s ease-in-out infinite;
+            animation: an-smoke-2 6s ease-in-out infinite;
+        }
+
+        .ag-smoke-3 {
+            width: 100%;
+            z-index: -4;
+            top: -32em;
+        }
+
+        .ag-smoke-4 {
+            width: 61.4em;
+            z-index: -3;
+            position: absolute;
+            top: 12em;
+            right: 0;
+            -webkit-animation: an-smoke-3 6s ease-in-out infinite;
+            -moz-animation: an-smoke-3 6s ease-in-out infinite;
+            -o-animation: an-smoke-3 6s ease-in-out infinite;
+            animation: an-smoke-3 6s ease-in-out infinite;
+        }
+
+        .ag-smoke__delay-1 {
+            -webkit-animation-delay: 2s;
+            -moz-animation-delay: 2s;
+            -o-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+
+        .ag-smoke__delay-2 {
+            -webkit-animation-delay: 4s;
+            -moz-animation-delay: 4s;
+            -o-animation-delay: 4s;
+            animation-delay: 4s;
+        }
+
+        @-webkit-keyframes an-smoke-1 {
+            0% {
+                opacity: 0;
+
+                -webkit-transform: translateY(5%) rotate(.01deg);
+                transform: translateY(5%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -webkit-transform: translateY(0) rotate(.01deg);
+                transform: translateY(0) rotate(.01deg);
+            }
+        }
+
+        @-moz-keyframes an-smoke-1 {
+            0% {
+                opacity: 0;
+
+                -moz-transform: translateY(5%) rotate(.01deg);
+                transform: translateY(5%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -moz-transform: translateY(0) rotate(.01deg);
+                transform: translateY(0) rotate(.01deg);
+            }
+        }
+
+        @-o-keyframes an-smoke-1 {
+            0% {
+                opacity: 0;
+
+                -o-transform: translateY(5%) rotate(.01deg);
+                transform: translateY(5%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -o-transform: translateY(0) rotate(.01deg);
+                transform: translateY(0) rotate(.01deg);
+            }
+        }
+
+        @keyframes an-smoke-1 {
+            0% {
+                opacity: 0;
+
+                -webkit-transform: translateY(5%) rotate(.01deg);
+                -moz-transform: translateY(5%) rotate(.01deg);
+                -o-transform: translateY(5%) rotate(.01deg);
+                transform: translateY(5%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -webkit-transform: translateY(0) rotate(.01deg);
+                -moz-transform: translateY(0) rotate(.01deg);
+                -o-transform: translateY(0) rotate(.01deg);
+                transform: translateY(0) rotate(.01deg);
+            }
+        }
+
+        @-webkit-keyframes an-smoke-2 {
+            0% {
+                opacity: 0;
+
+                -webkit-transform: translate(-10%, 10%) rotate(.01deg);
+                transform: translate(-10%, 10%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -webkit-transform: translateY(5%) rotate(.01deg);
+                transform: translateY(5%) rotate(.01deg);
+            }
+        }
+
+        @-moz-keyframes an-smoke-2 {
+            0% {
+                opacity: 0;
+
+                -moz-transform: translate(-10%, 10%) rotate(.01deg);
+                transform: translate(-10%, 10%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -moz-transform: translateY(5%) rotate(.01deg);
+                transform: translateY(5%) rotate(.01deg);
+            }
+        }
+
+        @-o-keyframes an-smoke-2 {
+            0% {
+                opacity: 0;
+
+                -o-transform: translate(-10%, 10%) rotate(.01deg);
+                transform: translate(-10%, 10%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -o-transform: translateY(5%) rotate(.01deg);
+                transform: translateY(5%) rotate(.01deg);
+            }
+        }
+
+        @keyframes an-smoke-2 {
+            0% {
+                opacity: 0;
+
+                -webkit-transform: translate(-10%, 10%) rotate(.01deg);
+                -moz-transform: translate(-10%, 10%) rotate(.01deg);
+                -o-transform: translate(-10%, 10%) rotate(.01deg);
+                transform: translate(-10%, 10%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -webkit-transform: translateY(5%) rotate(.01deg);
+                -moz-transform: translateY(5%) rotate(.01deg);
+                -o-transform: translateY(5%) rotate(.01deg);
+                transform: translateY(5%) rotate(.01deg);
+            }
+        }
+
+        @-webkit-keyframes an-smoke-3 {
+            0% {
+                opacity: 0;
+
+                -webkit-transform: translateY(10%) rotate(.01deg);
+                transform: translateY(10%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -webkit-transform: translate(-10%, 5%) rotate(.01deg);
+                transform: translate(-10%, 5%) rotate(.01deg);
+            }
+        }
+
+        @-moz-keyframes an-smoke-3 {
+            0% {
+                opacity: 0;
+
+                -moz-transform: translateY(10%) rotate(.01deg);
+                transform: translateY(10%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -moz-transform: translate(-10%, 5%) rotate(.01deg);
+                transform: translate(-10%, 5%) rotate(.01deg);
+            }
+        }
+
+        @-o-keyframes an-smoke-3 {
+            0% {
+                opacity: 0;
+
+                -o-transform: translateY(10%) rotate(.01deg);
+                transform: translateY(10%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -o-transform: translate(-10%, 5%) rotate(.01deg);
+                transform: translate(-10%, 5%) rotate(.01deg);
+            }
+        }
+
+        @keyframes an-smoke-3 {
+            0% {
+                opacity: 0;
+
+                -webkit-transform: translateY(10%) rotate(.01deg);
+                -moz-transform: translateY(10%) rotate(.01deg);
+                -o-transform: translateY(10%) rotate(.01deg);
+                transform: translateY(10%) rotate(.01deg);
+            }
+
+            50% {
+                opacity: .9;
+            }
+
+            to {
+                opacity: 0;
+
+                -webkit-transform: translate(-10%, 5%) rotate(.01deg);
+                -moz-transform: translate(-10%, 5%) rotate(.01deg);
+                -o-transform: translate(-10%, 5%) rotate(.01deg);
+                transform: translate(-10%, 5%) rotate(.01deg);
+            }
+        }
+
+
+        @media only screen and (max-width: 767px) {
+            .ag-format-container {
+                width: 96%;
+            }
+
+        }
+
+        @media only screen and (max-width: 639px) {}
+
+        @media only screen and (max-width: 479px) {}
+
+        @media (min-width: 768px) and (max-width: 979px) {
+            .ag-format-container {
+                width: 750px;
+            }
+
+        }
+
+        @media (min-width: 980px) and (max-width: 1161px) {
+            .ag-format-container {
+                width: 960px;
+            }
+
+        }
+
+        #c_n1 {
+            z-index: 9999999999999 !important;
+        }
+
+        .marquee {
+            font-size: 2vw;
+            color: #ff0000;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 2.5vw;
+            overflow: hidden;
+            background: linear-gradient(9deg, #8b0000, #251212);
+            position: relative;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .marquee {
+                height: 5.5vw;
+            }
+        }
+
+        .marquee div {
+            display: block;
+            width: 200%;
+            position: absolute;
+            overflow: hidden;
+            animation: marquee 12s linear infinite;
+        }
+
+        .marquee span {
+            float: left;
+            width: 50%;
+        }
+
+        @keyframes marquee {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+    </style>
+</head>
+
+<body onclick="theme_audio()">
+    <div class="marquee">
+        <div>
+            <span>🇻🇳 Fuck OFF China - Vietnam Number One 🇻🇳</span>
+            <span>🇻🇳 Hoang Sa - Truong Sa Belong To Vietnamese 🇻🇳</span>
+        </div>
+    </div>
+    <div id="hacked">
+        <div class="container">
+            <img class="logo rotate" src="https://i.imgur.com/usRNe6R.jpeg">
+            <div class="text"></div>
+        </div>
+        <div id="clock"></div>
+    </div>
+    <section class="ag-smoke-block">
+        <div class="ag-smoke-1"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-1.png">
+        </div>
+        <div class="ag-smoke-1 ag-smoke__delay-1"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-1.png">
+        </div>
+        <div class="ag-smoke-1 ag-smoke__delay-2"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-1.png">
+        </div>
+        <div class="ag-smoke-2"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-2.png">
+        </div>
+        <div class="ag-smoke-2 ag-smoke__delay-1"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-2.png">
+        </div>
+        <div class="ag-smoke-2 ag-smoke__delay-2"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-2.png">
+        </div>
+        <div class="ag-smoke-3"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-3.png">
+        </div>
+        <div class="ag-smoke-3 ag-smoke__delay-1"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-3.png">
+        </div>
+        <div class="ag-smoke-3 ag-smoke__delay-2"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-3.png">
+        </div>
+        <div class="ag-smoke-4"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-4.png">
+        </div>
+        <div class="ag-smoke-4 ag-smoke__delay-1"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-4.png">
+        </div>
+        <div class="ag-smoke-4 ag-smoke__delay-2"><img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/animation-smoke-img/images/smoke-4.png">
+        </div>
+        <div class="ag-format-container">
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-nest.js/1.0.1/canvas-nest.js" color="255, 0, 0"
+        pointcolor="127,255,0" opacity="1" count="450"></script>
+    <script>
+        const music= [
+  "https://files.catbox.moe/rsi3ma.mp3", 
+];
+let index = Math.floor(Math.random() * music.length);
+const audio = new Audio(music[index]);
+function theme_audio(){
+  audio.play();
+}
+audio.addEventListener("ended", function() {
+  index = (index + 1) % music.length;
+  audio.src = music[index];
+  audio.play();
+});
+    </script>
+    <script>
+        var monthText=["壹月","贰月","叁月","肆月","伍月","陆月","柒月","捌月","玖月","拾月","拾壹月","拾贰月"];var dayText=["壹号","贰号","叁号","肆号","伍号","陆号","柒号","捌号","玖号","拾号","拾壹号","拾贰号","拾叁号","拾肆号","拾伍号","拾陆号","拾柒号","拾捌号","拾玖号","贰拾号","贰拾壹号","贰拾贰号","贰拾叁号","贰拾肆号","贰拾伍号","贰拾陆号","贰拾柒号","贰拾捌号","贰拾玖号","叁拾号","叁拾壹号"];var weekText=["星期日","星期壹","星期贰","星期叁","星期肆","星期伍","星期陆"];var hourText=["零点","壹点","贰点","叁点","肆点","伍点","陆点","柒点","捌点","玖点","拾点","拾壹点","拾贰点","拾叁点","拾肆点","拾伍点","拾陆点","拾柒点","拾捌点","拾玖点","贰拾点","贰拾壹点","贰拾贰点","贰拾叁点"];var minuteText=["壹分","贰分","叁分","肆分","伍分","陆分","柒分","捌分","玖分","拾分","拾壹分","拾贰分","拾叁分","拾肆分","拾伍分","拾陆分","拾柒分","拾捌分","拾玖分","贰拾分","贰拾壹分","贰拾贰分","贰拾叁分","贰拾肆分","贰拾伍分","贰拾陆分","贰拾柒分","贰拾捌分","贰拾玖分","叁拾分","叁拾壹分","叁拾贰分","叁拾叁分","叁拾肆分","叁拾伍分","叁拾陆分","叁拾柒分","叁拾捌分","叁拾玖分","肆拾分","肆拾壹分","肆拾贰分","肆拾叁分","肆拾肆分","肆拾伍分","肆拾陆分","肆拾柒分","肆拾捌分","肆拾玖分","伍拾分","伍拾壹分","伍拾贰分","伍拾叁分","伍拾肆分","伍拾伍分","伍拾陆分","伍拾柒分","伍拾捌分","伍拾玖分","陆拾分"];var secondsText=["壹秒","贰秒","叁秒","肆秒","伍秒","陆秒","柒秒","捌秒","玖秒","拾秒","拾壹秒","拾贰秒","拾叁秒","拾肆秒","拾伍秒","拾陆秒","拾柒秒","拾捌秒","拾玖秒","贰拾秒","贰拾壹秒","贰拾贰秒","贰拾叁秒","贰拾肆秒","贰拾伍秒","贰拾陆秒","贰拾柒秒","贰拾捌秒","贰拾玖秒","叁拾秒","叁拾壹秒","叁拾贰秒","叁拾叁秒","叁拾肆秒","叁拾伍秒","叁拾陆秒","叁拾柒秒","叁拾捌秒","叁拾玖秒","肆拾秒","肆拾壹秒","肆拾贰秒","肆拾叁秒","肆拾肆秒","肆拾伍秒","肆拾陆秒","肆拾柒秒","肆拾捌秒","肆拾玖秒","伍拾秒","伍拾壹秒","伍拾贰秒","伍拾叁秒","伍拾肆秒","伍拾伍秒","伍拾陆秒","伍拾柒秒","伍拾捌秒","伍拾玖秒","陆拾秒"];var clock;var monthList=[];var dayList=[];var weekList=[];var hourList=[];var minuteList=[];var secondsList=[];var isCircle = false;
+var textSet = [
+	[monthText, monthList],
+	[dayText, dayList],
+	[weekText, weekList],
+	[hourText, hourList],
+	[minuteText, minuteList],
+	[secondsText, secondsList]
+];
+window.onload = function() {
+setTimeout(function() {
+document.querySelector('.logo').classList.remove('rotate');
+}, 1000);
+	init();
+	setInterval(function() {
+		runTime();
+	},100);
+	changePosition();
+	setTimeout(function() {
+		changeCircle();
+	}, 10);
+}
+
+function init() {
+	clock = document.getElementById('clock');
+	for (var i = 0; i < textSet.length; i++) {
+		for (var j = 0; j < textSet[i][0].length; j++) {
+			var temp = createLabel(textSet[i][0][j]);
+			clock.appendChild(temp);
+			textSet[i][1].push(temp);
+		}
+	}
+}
+
+function createLabel(text) {
+	var div = document.createElement('div');
+	div.classList.add('label');
+	div.innerText = text;
+	return div;
+}
+
+function runTime() {
+    var now = new Date();
+    var month = now.getMonth();
+    var day = now.getDate();
+    var week = now.getDay();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var seconds = now.getSeconds();
+    // seconds = seconds * 1 % 10;
+    minute = (minute + seconds / 10) * 2 % 10;
+    hour = (minute + seconds / 60) * 1 % 60;
+    // day = (day + hour / 24) * 1 % 31;
+    week = (week + day / 7) * 50 % 7;
+    month = (month + day / 31) * 1 % 12;
+    initStyle();
+    var nowValue = [month, day - 1, week, hour, minute, seconds];
+    for (var i = 0; i < nowValue.length; i++) {
+        var num = Math.floor(nowValue[i]);
+        textSet[i][1][num].style.color = 'red';
+    }
+    if (isCircle) {
+        var widthMid = document.body.clientWidth / 2;
+        var heightMid = document.body.clientHeight / 2;
+        for (var i = 0; i < textSet.length; i++) {
+            for (var j = 0; j < textSet[i][0].length; j++) {
+                var r = (i + 1) * 35 + 50 * i;
+                var deg = 360 / textSet[i][1].length * (j - nowValue[i]);
+                var x = r * Math.sin(deg * Math.PI / 180) + widthMid;
+                var y = heightMid - r * Math.cos(deg * Math.PI / 180);
+                var temp = textSet[i][1][j];
+                temp.style.transform = 'rotate(' + (-90 + deg) + 'deg)';
+                temp.style.left = x + 'px';
+                temp.style.top = y + 'px';
+            }
+        }
+    }
+}
+function initStyle() {
+	var label = document.getElementsByClassName('label');
+	for (var i = 0; i < label.length; i++) {
+		label[i].style.color = 'white';
+	}
+}
+
+function changePosition() {
+	for (let i = 0; i < textSet.length; i++) {
+		for (let j = 0; j < textSet[i][1].length; j++) {
+			let tempX = textSet[i][1][j].offsetLeft + "px";
+			let tempY = textSet[i][1][j].offsetTop + "px";
+			setTimeout(function() {
+				textSet[i][1][j].style.position = "absolute";
+				textSet[i][1][j].style.left = tempX;
+				textSet[i][1][j].style.top = tempY;
+			}, 50);
+		}
+	}
+}
+
+function changeCircle() {
+	isCircle = true;
+	clock.style.transform = "rotate(90deg)";
+}
+class TextScramble {
+  constructor(el) {
+    this.el = el;
+    this.chars = '!<>-_\\/[]{}—=+*^?#________';
+    this.update = this.update.bind(this);
+  }
+  setText(newText) {
+    const oldText = this.el.innerText;
+    const length = Math.max(oldText.length, newText.length);
+    const promise = new Promise(resolve => this.resolve = resolve);
+    this.queue = [];
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || '';
+      const to = newText[i] || '';
+      const start = Math.floor(Math.random() * 40);
+      const end = start + Math.floor(Math.random() * 40);
+      this.queue.push({
+        from,
+        to,
+        start,
+        end
+      });
+    }
+    cancelAnimationFrame(this.frameRequest);
+    this.frame = 0;
+    this.update();
+    return promise;
+  }
+  update() {
+    let output = '';
+    let complete = 0;
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let {
+        from,
+        to,
+        start,
+        end,
+        char
+      } = this.queue[i];
+      if (this.frame >= end) {
+        complete++;
+        output += to;
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar();
+          this.queue[i].char = char;
+        }
+        output += `<span class="dud">${char}</span>`;
+      } else {
+        output += from;
+      }
+    }
+    this.el.innerHTML = output;
+    if (complete === this.queue.length) {
+      this.resolve();
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update);
+      this.frame++;
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)];
+  }
+}
+
+const phrases = ['# 𝑯𝒐𝒂𝒏𝒈 𝑴𝒊𝒏𝒉 𝑪𝒉𝒊𝒆𝒏 #'', '/ from Vietnamese 🇻🇳 /', '# #', '/ Your website has been hacked /', '/ ....Bye :) /'];
+const el = document.querySelector('.text');
+const fx = new TextScramble(el);
+let counter = 0;
+const next = () => {
+  fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 900);
+  });
+  counter = (counter + 1) % phrases.length;
+};
+next();
+window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
+
+var canvas = document.getElementById("c");
+var ctx = canvas.getContext("2d");
+var w = canvas.width = window.innerWidth;
+var h = canvas.height = window.innerHeight;
+var particles = {};
+var particleIndex = 0;
+var maxParticles = 40;
+var hue = 0;
+var mouseX, mouseY;
+
+function resizeCanvas(){
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+}
+
+
+function Particle(){
+  this.x = mouseX || w/2;
+  this.y = mouseY || h/3;
+  this.size = this.random(50);
+  this.color = "hsla("+hue+", 100%, 50%, .01)";
+  this.maxLife = this.random(200);
+  this.life = 0;
+  this.vx = this.random(-5, 5);
+  this.vy = this.random(-1, 1);
+  this.grav = .003;
+  this.index = particleIndex;
+  particles[particleIndex] = this;
+  particleIndex++;
+}
+
+Particle.prototype = {
+
+  constructor: Particle,
+
+  draw: function(){
+    ctx.fillStyle = this.color;
+    ctx.fillRect(this.x, this.y, this.size, this.size);
+    this.update();
+  },
+
+  update: function(){
+    if(this.life >= this.maxLife){
+      delete particles[this.index];
+    }
+    this.x += this.vx;
+    this.y += this.vy;
+    this.vy += this.grav;
+    this.life++;
+  },
+
+  random: function(){
+    var 
+      min = arguments.length == 1 ? 0 : arguments[0],
+      max = arguments.length == 1 ? arguments[0] : arguments[1];
+    return Math.random() * (max - min) + min;
+  }
+
+};
+
+function animate(){
+  ctx.fillStyle = "rgba(0,0,0,.1)";
+  ctx.fillRect(0,0,w,h);
+
+  for(var i = 0; i<maxParticles; i++){
+    particles[i] = new Particle();
+  }
+  for(var i in particles){
+    particles[i].draw();
+  }
+hue += .3;
+  window.requestAnimationFrame(animate);
+}
+window.addEventListener("resize", function(){
+  resizeCanvas();
+});
+
+canvas.addEventListener("mousemove", function(e){
+  mouseX = e.offsetX;
+  mouseY = e.offsetY;
+});
+canvas.addEventListener("mouseleave", function(e){
+  mouseX = null;
+  mouseY = null;
+});
+animate();
+    </script>
+    <script>
+        var canvas=document.createElement("canvas"),height=canvas.height=window.innerHeight,width=canvas.width=window.innerWidth,ctx=canvas.getContext("2d");function random(r,t){return Math.random()*(t-r+1)+r}function range_map(r,t,e,a,i){return(r-t)*(i-a)/(e-t)+a}document.body.appendChild(canvas);for(var word_arr=[],txt_min_size=5,txt_max_size=25,keypress=!1,acclerate=2,i=0;i<25;i++)word_arr.push({x:random(0,width),y:random(0,height),text:"404",size:random(txt_min_size,txt_max_size)}),word_arr.push({x:random(0,width),y:random(0,height),text:"hacked",size:random(txt_min_size,txt_max_size)}),word_arr.push({x:random(0,width),y:random(0,height),text:"error",size:random(txt_min_size,txt_max_size)}),word_arr.push({x:random(0,width),y:random(0,height),text:"404",size:Math.floor(random(txt_min_size,txt_max_size))});function render(){ctx.fillStyle="rgba(0,0,0,1)",ctx.fillRect(0,0,width,height),ctx.fillStyle="#ff1100";for(var r=0;r<word_arr.length;r++){ctx.font=word_arr[r].size+"px sans-serif";var t=ctx.measureText(word_arr[r].text);ctx.fillText(word_arr[r].text,word_arr[r].x,word_arr[r].y),word_arr[r].x+=keypress?range_map(word_arr[r].size,txt_min_size,txt_max_size,2,4)*acclerate:range_map(word_arr[r].size,txt_min_size,txt_max_size,2,3),word_arr[r].x>=width&&(word_arr[r].x=2*-t.width,word_arr[r].y=random(0,height),word_arr[r].size=Math.floor(random(txt_min_size,txt_max_size)))}ctx.fill(),requestAnimationFrame(render)}render(),window.addEventListener("keydown",(function(){keypress=!0}),!0),window.addEventListener("keyup",(function(){keypress=!1}),!0);
+    </script>
+</body>
+
+</html>
